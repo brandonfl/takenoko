@@ -19,6 +19,9 @@
         <sonar.organization>topinambours</sonar.organization>
         <sonar.projectKey>topinambours_takenoko</sonar.projectKey>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <sonar.sources>src/main/</sonar.sources>
+        <sonar.language>java</sonar.language>
+        <sonar.java.binaries>target/</sonar.java.binaries>
     </properties>
 
     <build>

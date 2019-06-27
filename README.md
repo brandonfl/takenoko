@@ -3,10 +3,6 @@
 
 ![Build Status](https://travis-ci.com/Mahe-Thomas/takenoko.svg?token=bUpqc1gh48xw2KVtqzGz&branch=release9) ![](http://sonarqube.hamlab.fr/api/project_badges/measure?project=BambooMaster%3ATakenoko&metric=alert_status) ![](http://sonarqube.hamlab.fr/api/project_badges/measure?project=BambooMaster%3ATakenoko&metric=reliability_rating) ![](http://sonarqube.hamlab.fr/api/project_badges/measure?project=BambooMaster%3ATakenoko&metric=code_smells) ![](http://sonarqube.hamlab.fr/api/project_badges/measure?project=BambooMaster%3ATakenoko&metric=coverage)  ![](http://sonarqube.hamlab.fr/api/project_badges/measure?project=BambooMaster%3ATakenoko&metric=sqale_rating)
 
-> ##### SonarQube : [sonarqube.hamlab.fr](http://sonarqube.hamlab.fr/sessions/new)
-> Login : admin\
-> Pass : admin2906
-
 
 ## Master 1 Informatique - Université Nice Sophia Antipolis
 
