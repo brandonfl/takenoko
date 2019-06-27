@@ -20,6 +20,4 @@ jobs:
     - # stage name not required, will continue to use `test`
       script: mvn test
     - stage: sonar
-      script: mvn sonar:sonar \
-        -Dsonar.login="$SONAR_LOGIN"
-
+      script: echo "$SONAR_LOGIN" | mvn sonar:sonar -Dsonar.login="$SONAR_LOGIN"
