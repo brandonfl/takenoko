@@ -23,6 +23,6 @@ jobs:
       script: mvn sonar:sonar \
         -Dsonar.projectKey=topinambours_takenoko \
         -Dsonar.organization=topinambours \
-        -Dsonar.host.url=https://sonarcloud.io \
+        -Dsonar.host.url="https://sonarcloud.io" \
         -Dsonar.login="$SONAR_LOGIN"
 
