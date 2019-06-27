@@ -1,8 +1,22 @@
 language: java
 sudo: false
 
+notifications:
+  email: false
+
 jdk:
   - openjdk10
-script:
-  - mvn exec:java
-  - mvn test
+
+jobs:
+  include:
+    - stage: test
+      script: mvn exec:java
+    - # stage name not required, will continue to use `test`
+      script: mvn test
+    - stage: sonar
+      script: mvn sonar:sonar \
+        -Dsonar.projectKey=topinambours_takenoko \
+        -Dsonar.organization=topinambours \
+        -Dsonar.host.url=https://sonarcloud.io \
+        -Dsonar.login="$SONAR_LOGIN"
+
