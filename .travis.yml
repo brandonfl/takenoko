@@ -1,8 +1,23 @@
 language: java
 sudo: false
 
+notifications:
+  email: false
+
 jdk:
   - openjdk10
-script:
-  - mvn exec:java
-  - mvn test
+
+cache:
+  directories:
+    - $HOME/.m2
+
+jobs:
+  include:
+    - stage: "Build modules & pre-cache"
+      script: skip
+    - stage: test
+      script: mvn exec:java
+    - # stage name not required, will continue to use `test`
+      script: mvn test
+    - stage: sonar
+      script: echo "$SONAR_LOGIN" | mvn clean package sonar:sonar -Dsonar.login="$SONAR_LOGIN"

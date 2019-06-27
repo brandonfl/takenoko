@@ -15,6 +15,19 @@
         <version>2.0.6.RELEASE</version>
     </parent>
 
+    <properties>
+        <sonar.organization>topinambours</sonar.organization>
+        <sonar.projectKey>topinambours_takenoko</sonar.projectKey>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <sonar.sources>src/main/</sonar.sources>
+        <sonar.tests>src/test/</sonar.tests>
+        <sonar.language>java</sonar.language>
+        <sonar.java.binaries>target/</sonar.java.binaries>
+
+        <sonar.jacoco.itReportPath>${project.basedir}/../target/jacoco-it.exec</sonar.jacoco.itReportPath>
+        <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
+        <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
+    </properties>
 
     <build>
         <sourceDirectory>src/main/</sourceDirectory>
@@ -32,6 +45,33 @@
         </testResources>
 
         <plugins>
+                <plugin>
+                    <groupId>org.jacoco</groupId>
+                    <artifactId>jacoco-maven-plugin</artifactId>
+                    <version>0.8.3</version>
+                    <executions>
+                        <execution>
+                            <id>agent-for-ut</id>
+                            <goals>
+                                <goal>prepare-agent</goal>
+                            </goals>
+                            <configuration>
+                                <append>true</append>
+                                <destFile>${sonar.jacoco.reportPath}</destFile>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>agent-for-it</id>
+                            <goals>
+                                <goal>prepare-agent-integration</goal>
+                            </goals>
+                            <configuration>
+                                <append>true</append>
+                                <destFile>${sonar.jacoco.itReportPath}</destFile>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
 
             <!-- use mvn site -->
             <plugin>
@@ -134,6 +174,12 @@
                 </executions>
             </plugin>
 
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.5.0.1254</version>
+            </plugin>
+
         </plugins>
 
     </build>
@@ -179,6 +225,11 @@
             <version>0.3.4</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+            <version>0.8.3</version>
+        </dependency>
 
     </dependencies>
 

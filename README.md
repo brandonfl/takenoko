@@ -1,12 +1,7 @@
 
 # Projet [takenoko](http://jeuxstrategie1.free.fr/jeu_takenoko/regle.pdf "takenoko")
 
-![Build Status](https://travis-ci.com/Mahe-Thomas/takenoko.svg?token=bUpqc1gh48xw2KVtqzGz&branch=release9) ![](http://sonarqube.hamlab.fr/api/project_badges/measure?project=BambooMaster%3ATakenoko&metric=alert_status) ![](http://sonarqube.hamlab.fr/api/project_badges/measure?project=BambooMaster%3ATakenoko&metric=reliability_rating) ![](http://sonarqube.hamlab.fr/api/project_badges/measure?project=BambooMaster%3ATakenoko&metric=code_smells) ![](http://sonarqube.hamlab.fr/api/project_badges/measure?project=BambooMaster%3ATakenoko&metric=coverage)  ![](http://sonarqube.hamlab.fr/api/project_badges/measure?project=BambooMaster%3ATakenoko&metric=sqale_rating)
-
-> ##### SonarQube : [sonarqube.hamlab.fr](http://sonarqube.hamlab.fr/sessions/new)
-> Login : admin\
-> Pass : admin2906
-
+![Build Status](https://travis-ci.com/topinambours/takenoko.svg?branch=master) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=topinambours_takenoko&metric=alert_status)](https://sonarcloud.io/dashboard?id=topinambours_takenoko) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=topinambours_takenoko&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=topinambours_takenoko) [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=topinambours_takenoko&metric=coverage)](https://sonarcloud.io/dashboard?id=topinambours_takenoko)
 
 ## Master 1 Informatique - Université Nice Sophia Antipolis
 
