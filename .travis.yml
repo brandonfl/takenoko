@@ -7,8 +7,14 @@ notifications:
 jdk:
   - openjdk10
 
+cache:
+  directories:
+    - $HOME/.m2
+
 jobs:
   include:
+    - stage: "Build modules & pre-cache"
+      script: skip
     - stage: test
       script: mvn exec:java
     - # stage name not required, will continue to use `test`
